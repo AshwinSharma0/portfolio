@@ -52,9 +52,9 @@ function Contact() {
     });
   };
 
-  const emailServiceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-  const emailTemplateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-  const emailPublicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+  const emailServiceId = import.meta.env.service_6whbhu7;
+  const emailTemplateId = import.meta.env.template_qgx2slj;
+  const emailPublicKey = import.meta.env.2eE3_SBZji_UJ5qrs;
 
   const handleSubmit = (e) => {
     e.preventDefault();
