@@ -52,9 +52,9 @@ function Contact() {
     });
   };
 
-  const emailServiceId = import.meta.env.service_6whbhu7;
-  const emailTemplateId = import.meta.env.template_qgx2slj;
-  const emailPublicKey = import.meta.env.2eE3_SBZji_UJ5qrs;
+  const emailServiceId = 'service_6whbhu7';
+  const emailTemplateId = 'template_qgx2slj';
+  const emailPublicKey = '2zE2tIegpX_Yv4kp4';
 
   const handleSubmit = (e) => {
     e.preventDefault();
