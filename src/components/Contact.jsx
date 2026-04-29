@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, Linkedin, Github, Send } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -51,9 +52,13 @@ function Contact() {
     });
   };
 
+  const emailServiceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+  const emailTemplateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+  const emailPublicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     if (!formData.name || !formData.email || !formData.message) {
       toast.error('Please fill in all fields');
       return;
@@ -65,13 +70,34 @@ function Contact() {
       return;
     }
 
+    if (!emailServiceId || !emailTemplateId || !emailPublicKey) {
+      toast.error('Email service is not configured. Please add your EmailJS keys.');
+      return;
+    }
+
     setIsSubmitting(true);
-    
-    setTimeout(() => {
-      toast.success('Message sent successfully');
-      setFormData({ name: '', email: '', message: '' });
-      setIsSubmitting(false);
-    }, 1000);
+
+    emailjs
+      .send(
+        emailServiceId,
+        emailTemplateId,
+        {
+          from_name: formData.name,
+          reply_to: formData.email,
+          message: formData.message
+        },
+        emailPublicKey
+      )
+      .then(() => {
+        toast.success('Message sent successfully');
+        setFormData({ name: '', email: '', message: '' });
+      })
+      .catch(() => {
+        toast.error('Unable to send message. Please try again later.');
+      })
+      .finally(() => {
+        setIsSubmitting(false);
+      });
   };
 
   return (

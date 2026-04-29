@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>cinemaX | Movie Booking</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="home">
+  <div class="page-shell">
+    <header class="top-nav">
+      <div class="brand">
+        <span class="brand-name">cinema</span><span class="brand-accent">X</span>
+      </div>
+      <nav class="nav-links">
+        <a href="#now-showing">Now showing</a>
+        <a href="#coming-soon">Coming soon</a>
+        <a href="cinemas.html">Cinemas</a>
+        <a href="offers.html">Offers</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn-ghost" href="login.html">Sign in</a>
+        <a class="btn btn-primary" href="my-bookings.html">My bookings</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero-banner">
+        <div class="hero-copy">
+          <span class="hero-tag">Featured this week</span>
+          <h1>Dune: Part Three</h1>
+          <div class="hero-meta">
+            <span>⭐ 9.1</span>
+            <span>🕐 2h 45m</span>
+            <span>Sci-fi / Adventure</span>
+            <span>PG-13</span>
+          </div>
+          <div class="hero-actions">
+            <button class="btn btn-primary">Book tickets</button>
+            <button class="btn btn-ghost">Watch trailer</button>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="poster-card">
+            <div class="poster-top">2026</div>
+            <div class="poster-title">Dune</div>
+            <div class="poster-subtitle">Part Three</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="now-showing" id="now-showing">
+        <div class="section-header">
+          <h2>Now showing</h2>
+          <div class="genre-tabs" role="tablist">
+            <button class="tab active" data-tab="all">All genres</button>
+            <button class="tab" data-tab="action">Action</button>
+            <button class="tab" data-tab="drama">Drama</button>
+            <button class="tab" data-tab="comedy">Comedy</button>
+            <button class="tab" data-tab="horror">Horror</button>
+            <button class="tab" data-tab="animation">Animation</button>
+          </div>
+        </div>
+        <div class="movie-grid">
+          <article class="movie-card" data-genre="action">
+            <div class="movie-thumb movie-thumb-blue">🌍</div>
+            <div class="movie-chip movie-chip-left">Action</div>
+            <div class="movie-chip movie-chip-right">⭐ 8.7</div>
+            <div class="movie-info">
+              <h3>Interstellar 2</h3>
+              <p>2h 58m · PG-13</p>
+              <div class="movie-footer">
+                <span>From ₹299</span>
+                <button class="btn btn-small">Book</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="movie-card" data-genre="horror">
+            <div class="movie-thumb movie-thumb-red">🩸</div>
+            <div class="movie-chip movie-chip-left">Horror</div>
+            <div class="movie-chip movie-chip-right">⭐ 7.9</div>
+            <div class="movie-info">
+              <h3>Shadows of Eden</h3>
+              <p>1h 52m · R</p>
+              <div class="movie-footer">
+                <span>From ₹249</span>
+                <button class="btn btn-small">Book</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="movie-card" data-genre="drama">
+            <div class="movie-thumb movie-thumb-green">🎭</div>
+            <div class="movie-chip movie-chip-left">Drama</div>
+            <div class="movie-chip movie-chip-right">⭐ 8.2</div>
+            <div class="movie-info">
+              <h3>The Last Horizon</h3>
+              <p>2h 10m · PG</p>
+              <div class="movie-footer">
+                <span>From ₹199</span>
+                <button class="btn btn-small">Book</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="movie-card" data-genre="animation">
+            <div class="movie-thumb movie-thumb-gold">👑</div>
+            <div class="movie-chip movie-chip-left">Animation</div>
+            <div class="movie-chip movie-chip-right">⭐ 9.0</div>
+            <div class="movie-info">
+              <h3>Kingdom of Light</h3>
+              <p>1h 45m · U</p>
+              <div class="movie-footer">
+                <span>From ₹179</span>
+                <button class="btn btn-small">Book</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="showtimes-panel">
+        <div class="panel-header">
+          <h2>Showtimes near you — New Delhi</h2>
+          <p>Explore available seats for today and the next few days.</p>
+        </div>
+        <div class="date-scroll" role="tablist">
+          <button class="date-btn active" data-date="09">Thu 09</button>
+          <button class="date-btn" data-date="10">Fri 10</button>
+          <button class="date-btn" data-date="11">Sat 11</button>
+          <button class="date-btn" data-date="12">Sun 12</button>
+          <button class="date-btn" data-date="13">Mon 13</button>
+          <button class="date-btn" data-date="14">Tue 14</button>
+        </div>
+
+        <div class="cinema-list">
+          <div class="cinema-row">
+            <div>
+              <div class="cinema-name">PVR Cinemas — Connaught Place</div>
+              <div class="cinema-meta">3.2 km away · IMAX · 4DX available</div>
+            </div>
+            <div class="times">
+              <button class="time-btn">9:30 AM</button>
+              <button class="time-btn time-warn">12:00 PM</button>
+              <button class="time-btn active">3:15 PM</button>
+              <button class="time-btn">6:30 PM</button>
+              <button class="time-btn">9:45 PM</button>
+            </div>
+          </div>
+
+          <div class="cinema-row">
+            <div>
+              <div class="cinema-name">INOX — Nehru Place</div>
+              <div class="cinema-meta">5.8 km away · Dolby Atmos available</div>
+            </div>
+            <div class="times">
+              <button class="time-btn">10:00 AM</button>
+              <button class="time-btn time-warn">1:30 PM</button>
+              <button class="time-btn">4:45 PM</button>
+              <button class="time-btn time-sold" disabled>8:00 PM</button>
+            </div>
+          </div>
+
+          <div class="cinema-row">
+            <div>
+              <div class="cinema-name">Cinepolis — Select City Walk</div>
+              <div class="cinema-meta">8.1 km away · VIP Lounge available</div>
+            </div>
+            <div class="times">
+              <button class="time-btn">11:15 AM</button>
+              <button class="time-btn">2:30 PM</button>
+              <button class="time-btn time-warn">5:45 PM</button>
+              <button class="time-btn time-warn">9:00 PM</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="legend">
+          <span><span class="legend-dot"></span>Available</span>
+          <span><span class="legend-dot warn"></span>Filling fast</span>
+          <span><span class="legend-dot sold"></span>Sold out</span>
+        </div>
+      </section>
+
+      <section class="promo-banner" id="offers">
+        <div>
+          <h2>Weekend offer — save 30%</h2>
+          <p>Book 2 or more tickets this weekend and get 30% off with code WEEKEND30.</p>
+        </div>
+        <button class="btn btn-ghost promo-btn">Claim offer →</button>
+      </section>
+    </main>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
