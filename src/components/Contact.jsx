@@ -25,8 +25,8 @@ const contactMethods = [
   {
     icon: Linkedin,
     label: 'LinkedIn',
-    value: 'linkedin.com/in/ashwinsharma-/',
-    href: 'https://www.linkedin.com/in/ashwinsharma-/'
+    value: 'linkedin.com/in/iashwinsharma/',
+    href: 'https://www.linkedin.com/in/iashwinsharma/'
   },
   {
     icon: Github,

@@ -10,7 +10,7 @@ const socialLinks = [
   },
   {
     icon: Linkedin,
-    href: 'https://www.linkedin.com/in/ashwinsharma-/',
+    href: 'https://www.linkedin.com/in/iashwinsharma/',
     label: 'LinkedIn'
   },
   {

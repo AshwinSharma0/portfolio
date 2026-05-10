@@ -110,7 +110,7 @@ function Header() {
 
             <div className="flex items-center gap-2">
               <a 
-                href="https://www.linkedin.com/in/ashwinsharma-/" 
+                href="https://www.linkedin.com/in/iashwinsharma/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="hidden sm:inline-flex"
@@ -160,7 +160,7 @@ function Header() {
                       </a>
                     ))}
                     <a
-                      href="https://www.linkedin.com/in/ashwinsharma-/"
+                      href="https://www.linkedin.com/in/iashwinsharma/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="px-4 py-3 rounded-lg text-base font-medium text-foreground/80 hover:text-foreground hover:bg-muted flex items-center gap-2"
