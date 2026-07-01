@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, useScroll, useSpring } from 'framer-motion';
-import { Moon, Sun, Menu, Linkedin } from 'lucide-react';
+import { Moon, Sun, Menu, Linkedin, FileText } from 'lucide-react';
 import { useTheme } from '@/hooks/useTheme';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
@@ -109,6 +109,18 @@ function Header() {
             </nav>
 
             <div className="flex items-center gap-2">
+              <a
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hidden sm:inline-flex"
+              >
+                <Button variant="ghost" size="sm" className="rounded-lg px-3" aria-label="View resume">
+                  <FileText className="h-5 w-5 mr-2" />
+                  Resume
+                </Button>
+              </a>
+
               <a 
                 href="https://www.linkedin.com/in/iashwinsharma/" 
                 target="_blank" 
@@ -159,6 +171,15 @@ function Header() {
                         {link.name}
                       </a>
                     ))}
+                    <a
+                      href="/resume.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-3 rounded-lg text-base font-medium text-foreground/80 hover:text-foreground hover:bg-muted flex items-center gap-2"
+                    >
+                      <FileText className="h-5 w-5" />
+                      Resume
+                    </a>
                     <a
                       href="https://www.linkedin.com/in/iashwinsharma/"
                       target="_blank"

@@ -141,6 +141,16 @@ function Hero() {
           >
             View Projects
           </Button>
+          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+            <Button
+              size="lg"
+              variant="outline"
+              className="rounded-xl text-base px-8"
+            >
+              Resume
+              <Download className="ml-2 h-5 w-5" />
+            </Button>
+          </a>
         </motion.div>
       </div>
     </section>
